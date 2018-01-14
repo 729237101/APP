@@ -1,0 +1,620 @@
+html {
+  font-size: 100px;
+}
+
+html, body, .swiper-container, .swiper-wrapper, .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 3.75rem;
+  height: 6.67rem;
+  background: url("../img/bg.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.play {
+  position: absolute;
+  top: .23rem;
+  right: .23rem;
+  width: .3rem;
+  height: .3rem;
+  background: url("../img/audio_bg.svg") no-repeat;
+  background-size: cover;
+  z-index: 999;
+}
+
+.play.move {
+  animation: audio 1s linear 0s infinite both;
+}
+
+@keyframes audio {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.block-hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.block-hide li {
+  width: 100%;
+  height: 25%;
+  background: rgba(244, 179, 25, .8);
+
+}
+
+#page1 .block-hide li {
+  animation: fadeOutUp .5s linear both;
+}
+
+.bgblock li img {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  animation: blow 1.5s linear 0s infinite both;
+}
+
+.bgblock li:nth-of-type(1) img {
+  top: 3.5rem;
+  right: 1.5rem;
+  width: 1.33rem;
+  height: 1.275rem;
+}
+
+.bgblock li:nth-of-type(2) img {
+  top: 2.53rem;
+  left: .4rem;
+  width: .38rem;
+  height: .32rem;
+  animation-delay: .3s;
+}
+
+.bgblock li:nth-of-type(3) img {
+  top: 3rem;
+  left: 1rem;
+  width: .38rem;
+  height: .32rem;
+  animation-delay: .5s;
+}
+
+.bgblock li:nth-of-type(4) img {
+  top: 2rem;
+  left: 2.3rem;
+  width: .38rem;
+  height: .32rem;
+  animation-delay: .1s;
+}
+
+.bgblock li:nth-of-type(5) img {
+  top: 6rem;
+  left: 2.5rem;
+  width: .38rem;
+  height: .32rem;
+  animation-delay: .3s;
+}
+
+.bgblock li:nth-of-type(6) img {
+  top: 1rem;
+  left: 1.4rem;
+  width: .38rem;
+  height: .32rem;
+  animation-delay: .5s;
+}
+
+.bgblock li:nth-of-type(7) img {
+  top: .8rem;
+  left: 2.4rem;
+  width: .29rem;
+  height: .31rem;
+  animation-delay: .8s;
+}
+
+.bgblock li:nth-of-type(8) img {
+  top: 5.2rem;
+  left: 2rem;
+  width: .62rem;
+  height: .52rem;
+  animation-delay: .2s;
+}
+
+.bgblock li:nth-of-type(9) img {
+  top: 3rem;
+  left: 2.5rem;
+  width: .62rem;
+  height: .52rem;
+  animation-delay: .4s;
+}
+
+@keyframes blow {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.index .content {
+  width: 2rem;
+  height: 1.7rem;
+  background: #f4b319;
+  font-size: .4rem;
+  font-weight: bolder;
+  position: absolute;
+  top: 2.5rem;
+  left: 1.5rem;
+  z-index: 999;
+  border-radius: .2rem;
+  text-indent: .1rem;
+}
+
+#page1 .content {
+  animation: flip 1s linear .8s both;
+}
+
+.index .content .post, .name {
+  font-size: .2rem;
+  line-height: .3rem;
+  font-weight: 500;
+}
+
+.index .photo {
+  position: absolute;
+  top: 1.9rem;
+  left: .5rem;
+}
+
+#page1 .photo {
+  animation: rollIn .7s linear .8s both;
+}
+
+.second .motto-title {
+  width: .6rem;
+  height: .51rem;
+  background: url("../img/motto-bg-1.png") no-repeat;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: .5rem;
+}
+
+#page2 .motto-title {
+  animation: rotateInUpLeft .8s linear .6s both;
+}
+
+.second .motto-con {
+  width: 2.73rem;
+  height: 1.25rem;
+  background: url("../img/border.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 2.7rem;
+  left: .5rem;
+}
+
+#page2 .motto-con {
+  animation: border .8s linear .6s both;
+}
+
+.motto-con img {
+  display: block;
+}
+
+#page2 .motto-con img {
+  animation: zoomIn .8s linear .6s both;
+}
+
+@keyframes border {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.second-hide li {
+  width: 100%;
+  height: 50%;
+  background-color: rgba(244, 179, 25, .8);
+}
+
+#page2 .second-hide li {
+  animation: fadeOutDown .5s linear both;
+}
+
+#page2 .second-hide li:nth-of-type(2) {
+  animation: fadeOutUp .5s linear both;
+}
+
+.third-hide li {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background: rgba(244, 179, 25, .8);
+}
+
+#page3 .third-hide li, #page7 .third-hide li {
+  animation: fadeOutRight .5s linear 0s both;
+}
+
+#page3 .third-hide li:nth-of-type(2), #page7 .third-hide li:nth-of-type(2) {
+  animation: fadeOutLeft .5s linear 0s both;
+}
+
+.third .titlebg {
+  width: 1.2rem;
+  height: 1rem;
+  background: #f4b319;
+  font-size: .18rem;
+  line-height: .5rem;
+  font-weight: 600;
+  position: absolute;
+  top: 1rem;
+  left: .3rem;
+  text-align: center;
+}
+
+#page3 .titlebg {
+  animation: fadeInDown .8s linear .6s both;
+}
+
+.third .titlebg p:nth-of-type(1) {
+  font-size: .3rem;
+}
+
+.third .contents {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 2.7rem;
+  right: .8rem;
+}
+
+.contents li {
+  width: 100%;
+  height: .5rem;
+  margin: .2rem 0;
+}
+
+.contents li span {
+  display: block;
+  width: .5rem;
+  height: .5rem;
+  background-color: #f4b319;
+  float: left;
+  font-size: .3rem;
+  text-align: center;
+  line-height: .5rem;
+  font-weight: bold;
+}
+
+.contents li p {
+  line-height: .25rem;
+  font-size: .16rem;
+  text-indent: .2rem;
+  color: #f4b319;
+}
+
+.contents li p:nth-last-of-type(1) {
+  color: #fff;
+}
+
+#page3 .contents li:nth-of-type(1) span {
+  animation: fadeInRight .8s linear .6s both;
+}
+
+#page3 .contents li:nth-of-type(2) span {
+  animation: fadeInRight .8s linear .8s both;
+}
+
+#page3 .contents li:nth-of-type(3) span {
+  animation: fadeInRight .8s linear 1s both;
+}
+
+#page3 .contents li:nth-of-type(4) span {
+  animation: fadeInRight .8s linear 1.2s both;
+}
+
+#page3 .contents li:nth-of-type(1) p {
+  animation: fadeInRight .8s linear 1.4s both;
+}
+
+#page3 .contents li:nth-of-type(2) p {
+  animation: fadeInRight .8s linear 1.6s both;
+}
+
+#page3 .contents li:nth-of-type(3) p {
+  animation: fadeInRight .8s linear 1.8s both;
+}
+
+#page3 .contents li:nth-of-type(4) p {
+  animation: fadeInRight .8s linear 2s both;
+}
+
+#page4 div.block-hide {
+  background: rgba(244, 179, 25, .8);
+  animation: flipOutY .7s linear both;
+}
+
+#page4 div.block-hide:nth-of-type(2) {
+  animation: flipOutX .7s linear both;
+}
+
+.fourth-title {
+  width: 1.35rem;
+  height: 1.71rem;
+  background: url("../img/third-border.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 1rem;
+  left: .5rem;
+}
+
+#page4 .fourth-title {
+  animation: flipInY .5s linear .8s both;
+}
+
+.fourth-title .title {
+  width: 2rem;
+  position: absolute;
+  top: .29rem;
+  right: -1.2rem;
+  font-size: .3rem;
+  color: white;
+  font-weight: bold;
+}
+
+#page4 .fourth-title .title {
+  animation: bounceInRight .5s linear .8s both;
+}
+
+.fourth-title .title p {
+  font-size: .2rem;
+  font-weight: normal;
+  color: #f4b319;
+}
+
+.fourth-content {
+  width: 2.5rem;
+  height: 3.5rem;
+  background-color: #f4b319;
+  position: absolute;
+  top: 2.2rem;
+  right: .3rem;
+  font-size: .16rem;
+  line-height: .3rem;
+  text-indent: .05rem;
+  box-sizing: border-box;
+  padding-top: .3rem;
+}
+
+#page4 .fourth-content {
+  animation: flipInY .7s linear 1.3s both;
+}
+
+#page5 div.block-hide {
+  background: rgba(244, 179, 25, .8);
+  animation: rotateOutUpLeft .5s linear both;
+}
+
+#page5 div.block-hide:nth-of-type(2) {
+  animation: rotateOutUpRight .5s linear both;
+}
+
+.fifth-title, .sixth-title {
+  position: absolute;
+  top: .2rem;
+  left: .2rem;
+}
+
+.fifth-title span, .sixth-title span {
+  font-size: .2rem;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#page5 .fifth-title span, #page6 .sixth-title span {
+  animation: fadeInRight .5s linear .6s both;
+}
+
+.fifth-title span:nth-of-type(2), .sixth-title span:nth-of-type(2) {
+  color: #f4b319;
+}
+
+.fifth-title p, .sixth-title p {
+  font-size: .16rem;
+  color: #aaa;
+}
+
+#page5 .fifth-title p, #page6 .sixth-title p {
+  animation: fadeInRight .5s linear .5s both;
+}
+
+.ladder {
+  width: 3.75rem;
+  height: 3rem;
+  position: absolute;
+  left: 0;
+  top: 2.5rem;
+  background: url("../img/ladder.png") no-repeat;
+  background-size: cover;
+}
+
+.ladder .parson {
+  width: .66rem;
+  height: .825rem;
+  background: url("../img/person.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: -.1rem;
+}
+
+#page5 .parson {
+  animation: flash .5s linear .5s both;
+}
+
+.ladder .top {
+  font-size: .2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: .6rem;
+  text-align: center;
+  color: #f4b319;
+}
+
+.ladder .bottom {
+  width: .9rem;
+  font-size: .14rem;
+  position: absolute;
+  bottom: -.4rem;
+  left: .5rem;
+  color: #fff;
+}
+
+.js .top {
+  bottom: 2rem;
+  left: 1.6rem;
+}
+
+.js .bottom {
+  left: 1.4rem;
+  bottom: .9rem;
+}
+
+.vue .top {
+  bottom: 2.9rem;
+  right: -1.5rem;
+}
+
+.vue .bottom {
+  bottom: 2rem;
+  left: 2.5rem;
+}
+
+#page5 .top {
+  animation: fadeInDown .5s linear .7s both;
+}
+
+#page5 .bottom {
+  animation: fadeInUp .5s linear .7s both;
+}
+
+#page6 .block-hide {
+  background: rgba(244, 179, 25, .8);
+  animation: bounceOut .5s linear 0s both;
+}
+
+.sixth .line {
+  width: 100%;
+  height: 100%;
+  background: url("../img/line.png") no-repeat center center;
+  position: relative;
+}
+
+#page6 .line {
+  animation: fadeIn .5s linear .5s both;
+}
+
+.sixth .line li {
+  width: 50%;
+  height: 20%;
+  background: url("../img/line-bg.png") no-repeat;
+  position: absolute;
+  top: 24.5%;
+  left: 50%;
+}
+
+#page6 .line li {
+  animation: rollIn .5s linear .7s both;
+}
+
+#page6 .line li:nth-of-type(2) {
+  animation: rollIn .5s linear 1.2s both;
+}
+
+#page6 .line li:nth-of-type(3) {
+  animation: rollIn .5s linear 1.7s both;
+}
+
+.sixth .line li:nth-of-type(2) {
+  background: url("../img/line-bg2.png") no-repeat top right;
+  top: 45.5%;
+  left: 0;
+}
+
+.sixth .line li:nth-of-type(3) {
+  top: 66.7%;
+  left: 50%;
+}
+
+.sixth .line li span {
+  position: absolute;
+  top: .08rem;
+  left: .6rem;
+}
+
+.sixth .line li p {
+  color: #aaa;
+  margin: .3rem .05rem 0;
+  text-indent: .1rem;
+}
+
+.seventh .center .thank, .for, .watch {
+  color: #f4b319;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+}
+
+.seventh .center .thank, .watch {
+  font-size: .3rem;
+  top: 2rem;
+  left: .5rem;
+}
+
+.seventh .center .for {
+  font-size: .25rem;
+  top: 2.4rem;
+  left: 1.3rem;
+  font-weight: normal;
+}
+
+.seventh .center .watch {
+  top: 2.7rem;
+  left: 1rem;
+}
+
+#page7 .thank {
+  animation: rollIn .5s linear .6s both;
+}
+
+#page7 .for {
+  animation: rollIn .5s linear .8s both;
+}
+
+#page7 .watch {
+  animation: rollIn .5s linear 1s both;
+}
+
